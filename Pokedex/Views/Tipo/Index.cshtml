@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Application.Models.PokemonTipo>
+@{
+    ViewData["Title"] = "Pokemon Type Page";
+}
+
+<body class="antialiased font-sans bg-gray-200 ">
+    <div class="container mx-auto px-4 sm:px-8">
+        <div class="py-8">
+            <div>
+                <h1 class="font-medium leading-tight text-5xl mt-0 mb-10 text-blue-600">Pokemon type</h1>
+            </div>
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <a asp-area="" asp-controller="Tipo" asp-action="Create" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create new pokemon region</a>
+                <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                            <tr>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    ID
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Type
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                @foreach (var types in Model)
+                                {
+                                    <tr>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <div class="flex items-center">
+                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                    @types.Id
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <div class="flex items-center">
+                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                    @types.TipoPokemon
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                                <a class="bg-blue-500 p-2 text-white hover:shadow-lg text-xs font-thin" asp-controller="Tipo" asp-action="Update" asp-route-id=@types.Id>Edit</a>
+                                                <a class="bg-red-500 p-2 text-white hover:shadow-lg text-xs font-thin" asp-controller="Tipo" asp-action="Delete" asp-route-id=@types.Id>Remove</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Application.Models.PokemonsModel>
+@using Application.Models;
+
+@{
+    ViewData["Title"] = "Pokemon Page";
+}
+
+<body class="antialiased font-sans bg-gray-200 ">
+    <div class="container mx-auto px-4 sm:px-8">
+        <div class="py-8">
+            <div>
+                <h1 class="font-medium leading-tight text-5xl mt-0 mb-10 text-blue-600">Pokemons</h1>
+            </div>
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <form method="POST" asp-controller="Pokemon" asp-action="Home">
+                    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                        <input type="text" placeholder="Search by pokemon name, region, type" value="" name="pokemonName" id="pokemonNameId" class="px-8 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <p class="font-medium">
+                            Filters
+                        </p>
+                        <button class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md">
+                            Filter
+                        </button>
+                    </div>
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2 mt-4 mb-4">
+                            <p class="font-medium">Regions</p>
+                            <section>
+                                <label for="rcategory-all">Todo</label>
+                                <input type="radio" name="CategoryID" id="rcategory-all" value="0"/>
+                            </section>
+                                @foreach (PokemonRegion region in ViewBag.Regions)
+                                {
+                                    <section>
+                                        <label for="rcategory-@region.Id">@region.NombreRegion</label>
+                                    <input type="radio" name="CategoryID" id="rcategory-@region.Id" value="@region.Id"/>
+                                    </section>
+                                }
+                        </div>
+                    </div>
+                </form>
+
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                            <tr>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Pokemon
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Type
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Region
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                        @foreach(var pokemon in Model) {
+                                            <tr>
+                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <div class="flex items-center">
+                                                        <div class="flex-shrink-0 w-10 h-10">
+                                                            <img class="w-full h-full rounded-full"
+                                                                 src=@pokemon.ImagePath
+                                                                 alt="" />
+                                                        </div>
+                                                        <div class="ml-3">
+                                                            <p class="text-gray-900 whitespace-no-wrap">
+                                                                @pokemon.Name
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <p class="text-gray-900 whitespace-no-wrap">@pokemon.Tipo1</p>
+                                                    <p class="text-gray-900 whitespace-no-wrap">@pokemon.Tipo2</p>
+                                                </td>
+                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <p class="text-gray-900 whitespace-no-wrap">
+                                                        @pokemon.Region
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

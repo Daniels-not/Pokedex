@@ -1,0 +1,91 @@
+﻿@model Application.Models.SavePokemon;
+@{
+    ViewData["Title"] = "Update pokemon Page";
+}
+
+<div class="flex items-center justify-center p-12">
+
+    <div class="mx-auto w-full max-w-[550px]">
+        <div class="mb-4">
+            <h1 class="font-medium leading-tight text-5xl mt-0 mb-10 text-blue-600">Update Pokemon</h1>
+            <a asp-area="" asp-controller="Pokemon" asp-action="Index" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-10">Go back</a>
+        </div>
+        <form method="POST" asp-action="Update" asp-controller="Pokemon">
+            <input type="number"
+                   asp-for="Id"
+                   placeholder="id"
+                   hidden
+                   class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <div class="mb-5">
+                <label for="name"
+                       class="mb-3 block text-base font-medium text-[#07074D]">
+                    Pokemon name
+                </label>
+                <input type="text"
+                       name="name"
+                       id="name"
+                       asp-for="Name"
+                       placeholder="Pikachu"
+                       class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                <span class="text-red-50" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-5">
+                <label for="email"
+                       class="mb-3 block text-base font-medium text-[#07074D]">
+                    Pokemon image path
+                </label>
+                <input type="url"
+                       placeholder="https://pickachu.png"
+                       asp-for="ImagePath"
+                       class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                <span class="text-red-50" asp-validation-for="ImagePath"></span>
+            </div>
+            <div class="mb-5">
+                <label for="email"
+                       class="mb-3 block text-base font-medium text-[#07074D]">
+                    Type
+                </label>
+                <select asp-for="Tipo1" id="countries" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Choose a pokemon type</option>
+                    @foreach (var item in ViewBag.Types)
+                    {
+                        <option value=@item.Id>@item.TipoPokemon</option>
+                    }
+                </select>
+                <span class="text-red-50" asp-validation-for="Tipo1"></span>
+            </div>
+            <div class="mb-5">
+                <label for="email"
+                       class="mb-3 block text-base font-medium text-[#07074D]">
+                    Second Type (optional)
+                </label>
+                <select asp-for="Tipo2" id="countries" class="border border-[#e0e0e0] bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected value="0">Choose a second pokemon type</option>
+                    @foreach (var item in ViewBag.Types)
+                    {
+                        <option value=@item.Id>@item.TipoPokemon</option>
+                    }
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="email"
+                       class="mb-3 block text-base font-medium text-[#07074D]">
+                    Region
+                </label>
+                <select asp-for="Region" id="countries" class="border border-[#e0e0e0] bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Choose a pokemon region</option>
+                    @foreach (var item in ViewBag.Regions)
+                    {
+                        <option value=@item.Id>@item.NombreRegion</option>
+                    }
+                </select>
+                <span class="text-red-50" asp-validation-for="Region"></span>
+            </div>
+            <div>
+                <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                    Update
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

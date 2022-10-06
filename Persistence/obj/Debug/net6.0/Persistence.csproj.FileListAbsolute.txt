@@ -1,0 +1,14 @@
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\bin\Debug\net6.0\Persistence.deps.json
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\bin\Debug\net6.0\Persistence.runtimeconfig.json
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\bin\Debug\net6.0\Persistence.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\bin\Debug\net6.0\Persistence.pdb
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.pdb
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Persistence\obj\Debug\net6.0\ref\Persistence.dll

@@ -1,0 +1,26 @@
+﻿@model Application.Models.SavePokemonType;
+@{
+    ViewData["Title"] = "Delete Pokemon type Page";
+}
+
+<div class="flex items-center justify-center p-12">
+
+    <div class="mx-auto w-full max-w-[550px]">
+        <form method="POST" asp-action="DeletePost" asp-controller="Tipo">
+            <input type="number"
+                   asp-for="Id"
+                   placeholder="id"
+                   hidden
+                   class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <h1>Are you sure? do you want to delete this pokemon ? @Model.TipoPokemon</h1>
+            <div>
+                <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                    Yes, delete
+                </button>
+            </div>
+            <div>
+                <a asp-area="" asp-controller="Tipo" asp-action="Index" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">No, go back</a>
+            </div>
+        </form>
+    </div>
+</div>

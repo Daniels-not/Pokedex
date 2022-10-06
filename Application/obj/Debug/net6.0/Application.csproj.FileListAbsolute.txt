@@ -1,0 +1,15 @@
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\bin\Debug\net6.0\Application.deps.json
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\bin\Debug\net6.0\Application.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\bin\Debug\net6.0\Application.pdb
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\bin\Debug\net6.0\Persistence.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\bin\Debug\net6.0\Persistence.pdb
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\refint\Application.dll
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\Application.pdb
+D:\VSCODE\.NET\Pokedex\Pokedex\Application\obj\Debug\net6.0\ref\Application.dll
